@@ -26,22 +26,19 @@ $breakpoints: (
   @include mq(lg) {
     width: 200px;
     height: 55px;
-    top: 24px;
   }
   @include mq(md) {
     width: 150px;
     height: 55px;
-    top: 24px;
   }
   @include mq(xs) {
     width: 180px;
     height: 45px;
-    top: 29px;
   }
-
   text-align: center;
   background-color: black;
   transition: 0.2s;
+  border-radius: 0px;
 }
 
 .atoms-button:hover {
