@@ -1,0 +1,33 @@
+@use "../../variables" as *;
+
+$breakpoints: (
+  "xs": "screen and (min-width: 0px)",
+  "sm": "screen and (min-width: 576px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 992px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+.molecules-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 52px 20px;
+  position: absolute;
+
+  @include mq(lg) {
+    width: 327px;
+    height: 204px;
+  }
+  @include mq(md) {
+    width: 200px;
+    height: 128px;
+  }
+}
