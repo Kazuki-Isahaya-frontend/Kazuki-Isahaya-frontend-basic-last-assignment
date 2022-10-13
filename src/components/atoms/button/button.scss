@@ -23,18 +23,19 @@ $breakpoints: (
   margin: auto;
   position: absolute;
 
-  @include mq(lg) {
-    width: 200px;
-    height: 55px;
+  @include mq(xs) {
+    width: 180px;
+    height: 45px;
   }
   @include mq(md) {
     width: 150px;
     height: 55px;
   }
-  @include mq(xs) {
-    width: 180px;
-    height: 45px;
+  @include mq(lg) {
+    width: 200px;
+    height: 55px;
   }
+
   text-align: center;
   background-color: black;
   transition: 0.2s;
@@ -53,6 +54,7 @@ $breakpoints: (
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
   display: flex;
   align-items: center;
   color: white;
