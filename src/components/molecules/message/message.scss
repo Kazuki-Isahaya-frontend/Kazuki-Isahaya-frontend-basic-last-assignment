@@ -30,4 +30,45 @@ $breakpoints: (
     width: 200px;
     height: 128px;
   }
+
+  .title {
+    @include mq(lg) {
+      width: 287px;
+      height: 54px;
+      font-family: 'Noto Serif JP';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 54px;
+    }
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .text {
+    width: 84px;
+    height: 36px;
+
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 36px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
 }
