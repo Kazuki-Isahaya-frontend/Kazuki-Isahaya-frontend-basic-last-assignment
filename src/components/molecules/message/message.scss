@@ -19,16 +19,14 @@ $breakpoints: (
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 52px 20px;
+  margin: 10px;
   position: absolute;
 
-  @include mq(lg) {
-    width: 327px;
-    height: 204px;
+  @include mq(xs) {
+    padding: 32;
   }
-  @include mq(md) {
-    width: 200px;
-    height: 128px;
+  @include mq(lg) {
+    padding: 52;
   }
 
   .title {
@@ -36,23 +34,22 @@ $breakpoints: (
     font-style: normal;
     font-weight: 400;
 
-    @include mq(lg) {
-      width: 287px;
-      height: 54px;
-      font-size: 36px;
-      line-height: 54px;
-    }
-    @include mq(md) {
-      width: 160px;
-      height: 30px;
+    @include mq(xs) {
       font-size: 20px;
       line-height: 30px;
+      margin-bottom: 6px;
+    }
+    @include mq(lg) {
+      font-size: 36px;
+      line-height: 54px;
+      margin-bottom: 10px;
     }
 
     display: flex;
     align-items: center;
     text-align: center;
     color: #000000;
+
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -63,23 +60,20 @@ $breakpoints: (
     font-style: normal;
     font-weight: 400;
 
-    @include mq(lg) {
-    width: 84px;
-    height: 36px;
-    font-size: 14px;
-    line-height: 36px;
-    }
-    @include mq(md) {
-      width: 84px;
-      height: 28px;
+    @include mq(xs) {
       font-size: 14px;
       line-height: 28px;
+    }
+    @include mq(lg) {
+      font-size: 14px;
+      ine-height: 36px;
     }
 
     display: flex;
     align-items: center;
     text-align: center;
     color: #000000;
+
     flex: none;
     order: 0;
     flex-grow: 0;
