@@ -1,81 +1,63 @@
-@use "../../variables" as *;
-
-$breakpoints: (
-  "xs": "screen and (min-width: 0px)",
-  "sm": "screen and (min-width: 576px)",
-  "md": "screen and (min-width: 768px)",
-  "lg": "screen and (min-width: 992px)",
-  "xl": "screen and (min-width: 1200px)",
-) !default;
-
-@mixin mq($breakpoint) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
+@use "../../variables" as var;
 
 .molecules-message {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: auto;
+  padding: 0;
   position: absolute;
 
-  @include mq(xs) {
+  @include var.mq(xs) {
     padding: 32;
   }
-  @include mq(lg) {
+  @include var.mq(lg) {
     padding: 52;
   }
 
   .title {
-    font-family: 'Noto Serif JP';
+    font-family: var.$fontfamily-mincho;
     font-style: normal;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var.$black;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 
-    @include mq(xs) {
-      font-size: 20px;
+    @include var.mq(xs) {
+      font-size: var.$fontsize-l;
       line-height: 30px;
       margin-bottom: 6px;
     }
-    @include mq(lg) {
-      font-size: 36px;
+    @include var.mq(lg) {
+      font-size: var.$fontsize-xl;
       line-height: 54px;
       margin-bottom: 10px;
     }
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
   }
 
   .text {
-    font-family: 'Noto Sans JP';
+    font-family: var.$fontfamily-gothic;
     font-style: normal;
     font-weight: 400;
-
-    @include mq(xs) {
-      font-size: 14px;
-      line-height: 28px;
-    }
-    @include mq(lg) {
-      font-size: 14px;
-      ine-height: 36px;
-    }
-
+    font-size: var.$fontsize-s;
     display: flex;
     align-items: center;
     text-align: center;
-    color: #000000;
-
+    color: var.$black;
     flex: none;
     order: 0;
     flex-grow: 0;
+
+    @include var.mq(xs) {
+      line-height: 28px;
+    }
+    @include var.mq(lg) {
+      ine-height: 36px;
+    }
   }
 }
