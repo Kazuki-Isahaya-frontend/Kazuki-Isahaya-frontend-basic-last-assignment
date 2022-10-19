@@ -1,18 +1,4 @@
-@use "../../variables" as *;
-
-$breakpoints: (
-  "xs": "screen and (min-width: 0px)",
-  "sm": "screen and (min-width: 576px)",
-  "md": "screen and (min-width: 768px)",
-  "lg": "screen and (min-width: 992px)",
-  "xl": "screen and (min-width: 1200px)",
-) !default;
-
-@mixin mq($breakpoint) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
+@use "../../variables" as var;
 
 .atoms-button {
   display: flex;
@@ -23,15 +9,15 @@ $breakpoints: (
   margin: auto;
   position: absolute;
 
-  @include mq(xs) {
+  @include var.mq(xs) {
     width: 180px;
     height: 45px;
   }
-  @include mq(md) {
+  @include var.mq(md) {
     width: 150px;
     height: 55px;
   }
-  @include mq(lg) {
+  @include var.mq(lg) {
     width: 200px;
     height: 55px;
   }
@@ -47,17 +33,16 @@ $breakpoints: (
 }
 
 .atoms-button a {
+  display: flex;
   width: 52px;
   height: 20px;
-  font-family: "Noto Sans JP";
+  align-items: center;
+  color: var.$white;
+  font-family: var.$fontfamily-gothic;
+  font-size: var.$fontsize-s;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
   line-height: 20px;
-
-  display: flex;
-  align-items: center;
-  color: white;
   text-decoration: none;
   flex: none;
   order: 0;
