@@ -23,5 +23,18 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
+$breakpoints: (
+  "xs": "screen and (min-width: 0px)",
+  "sm": "screen and (min-width: 576px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 992px)",
+  "xl": "screen and (min-width: 1200px)",
+) !default;
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 $fontfamily-gothic: "Roboto", "Noto Sans JP", sans-serif;
 $fontfamily-mincho: "Noto Serif JP", serif;
