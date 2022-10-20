@@ -35,8 +35,9 @@ a {
     width: 200px;
     height: 55px;
   }
-}
-a:hover {
-  color: white;
-  background-color: #442606;
+
+  &:hover {
+    color: white;
+    background-color: #442606;
+  }
 }
