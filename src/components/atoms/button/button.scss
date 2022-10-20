@@ -1,50 +1,42 @@
-@use "../../variables" as var;
+@use "../../variables" as *;
 
-.atoms-button {
+a {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0px 16px;
+  text-align: center;
+  padding: auto;
   margin: auto;
   position: absolute;
-
-  @include var.mq(xs) {
-    width: 180px;
-    height: 45px;
-  }
-  @include var.mq(md) {
-    width: 150px;
-    height: 55px;
-  }
-  @include var.mq(lg) {
-    width: 200px;
-    height: 55px;
-  }
-
-  text-align: center;
+  color: white;
   background-color: black;
-  transition: 0.2s;
-  border-radius: 0px;
-}
-
-.atoms-button:hover {
-  background: #442606;
-}
-
-.atoms-button a {
-  display: flex;
-  width: 52px;
-  height: 20px;
-  align-items: center;
-  color: var.$white;
-  font-family: var.$fontfamily-gothic;
-  font-size: var.$fontsize-s;
+  font-family: $fontfamily-gothic;
+  font-size: $fontsize-s;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
+  transition: 0.2s;
+  border-radius: 0px;
   flex: none;
   order: 0;
   flex-grow: 0;
+
+  @media (min-width: $breakpoint-sm) {
+    width: 180px;
+    height: 45px;
+  }
+  @media (min-width: $breakpoint-md) {
+    width: 150px;
+    height: 55px;
+  }
+  @media (min-width: $breakpoint-lg) {
+    width: 200px;
+    height: 55px;
+  }
+}
+a:hover {
+  color: white;
+  background-color: #442606;
 }
