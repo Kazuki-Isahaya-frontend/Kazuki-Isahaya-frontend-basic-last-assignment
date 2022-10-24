@@ -4,36 +4,32 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
   position: absolute;
   margin: auto;
+  padding: 0;
+  box-shadow: 0 10px 25px 0 black;
 
-  @media (min-width: $breakpoint-sm) {
+  width: 224px;
+  @media (max-width: $breakpoint-md) {
     width: 540px;
-  }
-  @media (min-width: $breakpoint-md) {
-    width: 224px;
   }
 
   .imgbox {
-    @media (min-width: $breakpoint-sm) {
+    width: 224px;
+    @media (max-width: $breakpoint-md) {
       width: 540px;
     }
-    @media (min-width: $breakpoint-md) {
-      width: 224px;
-    }
+
     height: auto;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: black;
 
     img {
-      @media (min-width: $breakpoint-sm) {
+      width: 224px;
+      @media (max-width: $breakpoint-md) {
         width: 540px;
-      }
-      @media (min-width: $breakpoint-md) {
-        width: 224px;
       }
 
       &:hover {
@@ -44,6 +40,7 @@
       }
     }
   }
+
   .triangle {
     display: flex;
     position: absolute;
@@ -52,76 +49,58 @@
     border-style: solid;
     border-width: 150px 150px 0 0;
     border-color: #ffffff transparent transparent transparent;
-    margin: 0;
-    padding: 0;
 
-    span {
-      width: 91px;
-      height: 29px;
-      font-family: $fontfamily-mincho;
+    .tri-txt {
+      width: 130px;
       font-style: normal;
       font-weight: 700;
       font-size: $fontsize-l;
-      line-height: 29px;
       display: flex;
-      align-items: center;
       position: absolute;
-      color: #442606;
-      flex: none;
-      order: 0;
-      flex-grow: 0;
+      left: 5px;
+      top: -150px;
+      color: $orange_bistre;
     }
   }
 
-  div {
+  .card-text-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: white;
     margin: 0;
     padding: 32px;
 
-    @media (min-width: $breakpoint-sm) {
+    height: 183px;
+    width: 224px;
+    @media (max-width: $breakpoint-md) {
       width: 540px;
-      height: 183px;
-    }
-    @media (min-width: $breakpoint-md) {
-      width: 224px;
-      height: 183px;
     }
 
-    background: white;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-
-    p {
-      @media (min-width: $breakpoint-sm) {
-        width: 476px;
-        height: 64px;
-      }
-      @media (min-width: $breakpoint-md) {
-        width: 160px;
-        height: 64px;
-      }
-
-      font-family: $fontfamily-gothic;
-      font-style: normal;
-      font-weight: 400;
+    .card-text {
+      height: 64px;
       font-size: $fontsize-s;
       line-height: 33px;
       display: flex;
-      align-items: center;
-      color: #000000;
-      flex: none;
-      order: 0;
-      flex-grow: 1;
+      color: black;
+      margin: 0;
+
+      width: 160px;
+      @media (max-width: $breakpoint-md) {
+        width: 476px;
+      }
     }
 
     a {
-      color: #ffffff;
-      background-color: #000000;
+      color: white;
+      background-color: black;
+      width: 150px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
     }
   }
 }
