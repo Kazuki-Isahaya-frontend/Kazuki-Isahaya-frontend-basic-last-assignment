@@ -1,4 +1,4 @@
-@use "../../variables" as var;
+@use "../../variables" as *;
 
 .molecules-message {
   display: flex;
@@ -9,7 +9,7 @@
   padding: 0;
   position: absolute;
 
-  @include var.mq(xs) {
+  @mixin (max-width: $breakpoint-md) {
     padding: 32;
   }
   @include var.mq(lg) {
