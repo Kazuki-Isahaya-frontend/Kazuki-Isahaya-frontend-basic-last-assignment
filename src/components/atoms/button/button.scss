@@ -8,18 +8,18 @@
   position: absolute;
   color: white;
   background-color: black;
-  font-style: normal;
+  font-size: $fontsize-s;
   text-decoration: none;
   transition: 0.2s;
 
   width: 200px;
   height: 55px;
+  @media (max-width: $breakpoint-lg) {
+    width: 150px;
+  }
   @media (max-width: $breakpoint-md) {
     width: 180px;
     height: 45px;
-  }
-  @media (max-width: $breakpoint-lg) {
-    width: 150px;
   }
 
   &:hover {
