@@ -7,7 +7,7 @@
   position: absolute;
   margin: auto;
   padding: 0;
-  box-shadow: 0 10px 25px 0 black;
+  //box-shadow: 0 10px 25px 0 black;
 
   width: 224px;
   @media (max-width: $breakpoint-md) {
@@ -51,20 +51,21 @@
     border-color: #ffffff transparent transparent transparent;
 
     .tri-txt {
+      display: flex;
+      position: absolute;
+      left: 6px;
+      top: -150px;
       width: 130px;
       font-style: normal;
       font-weight: 700;
       font-size: $fontsize-l;
-      display: flex;
-      position: absolute;
-      left: 5px;
-      top: -150px;
       color: $orange_bistre;
     }
   }
 
   .card-text-wrap {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -79,10 +80,11 @@
     }
 
     .card-text {
+      display: flex;
+      position: absolute;
+      top: 32px;
       height: 64px;
       font-size: $fontsize-s;
-      line-height: 33px;
-      display: flex;
       color: black;
       margin: 0;
 
@@ -92,15 +94,26 @@
       }
     }
 
-    a {
-      color: white;
-      background-color: black;
-      width: 150px;
-      height: 55px;
+    .button {
       display: flex;
+      position: absolute;
+      bottom: 32px;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      color: white;
+      background-color: black;
       margin: 0;
+      font-size: $fontsize-s;
+      text-decoration: none;
+      transition: 0.2s;
+      width: 150px;
+      height: 55px;
+
+      &:hover {
+        color: white;
+        background-color: $orange_bistre;
+      }
     }
   }
 }
