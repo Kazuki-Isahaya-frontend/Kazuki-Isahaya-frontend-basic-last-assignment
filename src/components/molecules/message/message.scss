@@ -9,22 +9,19 @@
   margin: auto;
 
   padding: 52px 20px;
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-lg) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 
   .title {
     font-family: $fontfamily-mincho;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: $black;
 
     font-size: $fontsize-xl;
     line-height: 54px;
     margin-bottom: 10px;
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       font-size: $fontsize-l;
       line-height: 30px;
       margin-bottom: 6px;
@@ -32,16 +29,11 @@
   }
 
   .text {
-    font-style: normal;
     font-size: $fontsize-s;
-    display: flex;
-    align-items: center;
-    text-align: center;
     color: $black;
-    margin: 0;
 
     line-height: 36px;
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-lg) {
       line-height: 28px;
     }
   }
