@@ -1,17 +1,11 @@
 @use "../../variables" as *;
 
 .molecules-message {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  margin: auto;
+  text-align: center;
 
   padding: 52px 20px;
   @media (max-width: $breakpoint-lg) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 32px 20px;
   }
 
   .title {
@@ -31,6 +25,7 @@
   .text {
     font-size: $fontsize-s;
     color: $black;
+    margin-bottom: 0;
 
     line-height: 36px;
     @media (max-width: $breakpoint-lg) {
